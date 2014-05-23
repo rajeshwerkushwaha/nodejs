@@ -10,3 +10,4 @@ console.log('Ready to ROCK');
 console.log('Ready to ROCK THE WORLD');
 console.log('Ready to ROCK THIS WORLD');
 console.log('Ready to ROCK THIS KILLING WORLD');
+console.log('WORLD');
