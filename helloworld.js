@@ -6,3 +6,4 @@
 * To change this template use Tools | Templates.
 */
 console.log('Welcome to the NODE');
+console.log('Ready to ROCK');
