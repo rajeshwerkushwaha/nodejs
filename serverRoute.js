@@ -7,36 +7,15 @@
 */
 
 var http = require('http'),
-    url = require('url'),
-    handler = {};
+    url = require('url');
 
-handler['/'] = start;
-handler['/start'] = start;
-handler['/upload'] = upload;
-
-var server = http.createServer(requestHandler);
-server.listen(8000);
-
-function requestHandler(request, response){
-    var path = url.parse(request.url).pathname;
-    response.writeHead(200);
-    route(path, response);
-    response.end();
+function start(route, handler){
+    function onRequest(request, response){
+        var path = url.parse(request.url).pathname;
+        route(handler, path, response);
+    }
+    var server = http.createServer(onRequest);
+    server.listen(8000);    
 }
 
-
-function route(path, response){
-    var temp = handler[path](response);
-    return temp;
-}
-
-function start(response){
-    response.write('We are on start...');
-    response.end();
-}
-
-function upload(response){
-    response.write('We are on upload...');
-    response.end();
-}
-
+exports.start = start;
