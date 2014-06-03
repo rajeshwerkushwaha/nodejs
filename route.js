@@ -3,7 +3,7 @@
 * User: rajeshwerkushwaha
 * Date: 2014-06-01
 * Time: 02:33 PM
-* To change this template use Tools | Templates.
+* Purpose: Used to route the server request.
 */
 
 function route(handler, path, response, postData){
