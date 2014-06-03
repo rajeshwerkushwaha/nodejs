@@ -11,8 +11,15 @@ var http = require('http'),
 
 function start(route, handler){
     function onRequest(request, response){
+        var postData='';
+        request.on('data', function(data){
+            postData += data;
+        })
         var path = url.parse(request.url).pathname;
-        route(handler, path, response);
+        request.on('end', function(){
+            route(handler, path, response, postData);    
+        })
+        
     }
     var server = http.createServer(onRequest);
     server.listen(8000);    

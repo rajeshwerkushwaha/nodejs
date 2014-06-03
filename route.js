@@ -6,9 +6,9 @@
 * To change this template use Tools | Templates.
 */
 
-function route(handler, path, response){
+function route(handler, path, response, postData){
     if(typeof handler[path] == 'function'){
-        handler[path](response);
+        handler[path](response, postData);
     }else{
         console.log('No handler is there for path '+path);
         response.writeHead(404);
