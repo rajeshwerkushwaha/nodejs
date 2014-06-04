@@ -1,0 +1,32 @@
+/*
+    Document   : polls/public/stylesheets/style.css
+    Created on : 2014-06-04 05:54 PM
+    Author     : rajeshwerkushwaha
+    Description:
+    Purpose of the stylesheet follows.
+    To change this template use Tools | Templates.
+*/
+
+body {
+  padding-top: 50px;
+}
+
+.tab-content .lead {
+	margin-top: 20px;
+}
+
+.result-table {
+	margin: 20px 0;
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.result-table td {
+	padding: 8px;
+}
+
+.result-table > tbody > tr > td:first-child {
+	width: 25%;
+	max-width: 300px;
+	text-align: right;
+}
