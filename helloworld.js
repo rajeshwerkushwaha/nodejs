@@ -5,6 +5,7 @@
  * 
  */
 console.log('Welcome to the NODE');
+console.log('I have done some editing');
 console.log('Ready to ROCK');
 console.log('Ready to ROCK THE WORLD');
 console.log('Ready to ROCK THIS WORLD');
