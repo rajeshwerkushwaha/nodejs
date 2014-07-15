@@ -8,7 +8,7 @@ var options = {
 
 https.createServer(options, function (req, res) {
   res.writeHead(200);
-  res.end("Hello User...You are in a safe zone...\n");
+  res.end("Hello User...You are in a safe zone.\n");
 }).listen(8000);
 
 /*
